@@ -12,5 +12,12 @@ player.on('timeupdate', throttle(function(data) {
 );
 
 const keyPlay = localStorage.getItem('videoplayer-current-time');
-console.log(keyPlay);
-player.setCurrentTime(keyPlay);
+// console.log(keyPlay);
+if(keyPlay !== null){
+  console.log(keyPlay);
+  player.setCurrentTime(keyPlay);
+  
+} else{
+  return
+};
+

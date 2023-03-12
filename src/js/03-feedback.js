@@ -10,7 +10,7 @@ textareaEl.addEventListener('input', throttle(onTextareaInput, 500));
  function onFormElSubmit(event){
 event.preventDefault();
 event.currentTarget.reset();
-console.log(localStorage.getItem('feedback-form-state'));
+console.log(JSON.parse(localStorage.getItem('feedback-form-state')));
 localStorage.removeItem('feedback-form-state');
  };
 
